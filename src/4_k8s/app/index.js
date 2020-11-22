@@ -5,6 +5,6 @@ http.createServer((req, res) => {
         res.writeHead(200);
         res.end(`Hello from ${process.pid}`);
     }, 1000)
-}).listen(8000);
+}).listen(3000);
 
 console.log(`Worker ${process.pid} started`);
