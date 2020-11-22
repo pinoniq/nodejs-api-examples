@@ -4,6 +4,7 @@
  * Stolen from:
  * @see https://medium.com/better-programming/is-node-js-really-single-threaded-7ea59bcc8d64
  */
+// process.env.UV_THREADPOOL_SIZE=2;
 const crypto = require("crypto");
 const start = Date.now();
 

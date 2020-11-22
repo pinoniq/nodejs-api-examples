@@ -6,6 +6,8 @@
   "author": "Jeroen <jeroen.meeus2@realdolmen.com>",
   "license": "MIT",
   "scripts": {
-    "event_loop" : "node src/1_event_loop/index.js"
+    "event_loop" : "node src/1_event_loop/index.js",
+    "multi_core" : "node src/2_cluster_mode/index.js",
+    "pm2_cluster" : "pm2 start src/3_pm2/index.js -i max"
   }
 }
