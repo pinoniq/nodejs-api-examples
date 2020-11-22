@@ -20,4 +20,10 @@ const fibonacci = async (num) => {
 
 let start = Date.now();
 
-fibonacci(20).then((r) => console.log(`Time elapsed: ${Date.now() - start} ms`));
+fibonacci(20)
+    .then((r) => console.log(`Time elapsed: ${Date.now() - start} ms`))
+    .then(() => {
+        start = Date.now();
+        fibonacci(20).then((r) => console.log(`Time elapsed: ${Date.now() - start} ms`))
+    })
+;
