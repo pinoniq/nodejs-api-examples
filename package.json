@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-api-examples",
+  "version": "1.0.0",
+  "description": "Examples used in my lectures on nodejs apis",
+  "main": "index.js",
+  "author": "Jeroen <jeroen.meeus2@realdolmen.com>",
+  "license": "MIT",
+  "scripts": {
+    "event_loop" : "node src/1_event_loop/index.js"
+  }
+}
