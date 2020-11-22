@@ -1,12 +1,17 @@
-const fibonacci = (num) => {
+const makeItSlow = true;
+
+const doStuff = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const fibonacci = async (num) => {
+    if (makeItSlow) {
+        await doStuff(50);
+    }
     if (num <= 1) return 1;
 
-    return fibonacci(num - 1) + fibonacci(num - 2);
+    return await fibonacci(num - 1) + await fibonacci(num - 2);
 }
 
 let start = Date.now();
-console.log(fibonacci(5));
-console.log(`Time elapsed: ${Date.now() - start} ms`);
-
-console.log(fibonacci(50));
-console.log(`Time elapsed: ${Date.now() - start} ms`);
+fibonacci(20).then((r) => console.log(`Time elapsed: ${Date.now() - start} ms`));
