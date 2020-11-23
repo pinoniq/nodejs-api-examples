@@ -11,9 +11,11 @@
     "pm2_cluster": "pm2 start src/3_pm2/index.js -i max",
     "fib_slow": "node src/5_add_cache/index.js",
     "fib_fast_local": "node src/5_add_cache/index_with_local_cache.js",
-    "fib_fast_remote": "node src/5_add_cache/index_with_remote_cache.js"
+    "fib_fast_remote": "node src/5_add_cache/index_with_remote_cache.js",
+    "jwt_server": "node src/6_jwt/index.js"
   },
   "dependencies": {
+    "jsonwebtoken": "^8.5.1",
     "redis": "^3.0.2"
   }
 }
